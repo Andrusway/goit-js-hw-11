@@ -4,10 +4,10 @@ import{a as f,S as d,i as l}from"./assets/vendor-BSTwZ_tR.js";(function(){const 
 <img class="gallery-image" src="${o}" alt="${e}" loading="lazy">
 </a>
 <div class="info">
-<p class"info-item"> <b>Likes</b> <span>${t}</span></p>
-<p class"info-item"> <b>Views</b> <span>${i}</span></p>
-<p class"info-item"> <b>Comments</b> <span>${p}</span></p>
-<p class"info-item"> <b>Downloads</b> <span>${u}</span></p>
+<p class="info-item"> <b>Likes</b> <span>${t}</span></p>
+<p class="info-item"> <b>Views</b> <span>${i}</span></p>
+<p class="info-item"> <b>Comments</b> <span>${p}</span></p>
+<p class="info-item"> <b>Downloads</b> <span>${u}</span></p>
 </div>
 </li>
 `).join("");c.insertAdjacentHTML("beforeend",r),h.refresh()}function L(){c.innerHTML=""}function S(){n&&n.classList.remove("hidden")}function w(){n&&n.classList.add("hidden")}const P=document.querySelector(".form");P.addEventListener("submit",s=>{s.preventDefault();const r=s.target.elements["search-text"].value.trim();if(!r){l.warning({title:"Oops",message:"Please enter a search term!",position:"topRight"});return}S(),L(),y(r).then(o=>{if(o.hits.length===0){l.error({title:"No results",message:"Sorry, there are no images matching your search query. Please try again!",position:"topRight"});return}b(o.hits)}).catch(o=>{l.error({title:"Error",message:"Something went wrong. Please try again later!",position:"topRight"}),console.log(o)}).finally(()=>{w()})});
